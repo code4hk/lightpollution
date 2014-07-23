@@ -1,0 +1,11 @@
+## MAC OS X
+.DS_Store
+
+## Windows
+Thumbs.db
+
+## General
+logs/*
+node_modules/
+bower_components/
+public/lib/
