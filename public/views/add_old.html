@@ -1,0 +1,54 @@
+<div>
+ADD MoDAL
+  <!-- Modal -->
+  <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <form id="addForm" data-target="#addModalBody" method="post" action="{{baseURL}}/{{action}}">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+        <h3 id="myModalLabel">{{t form_title}}</h3>
+      </div>
+      <div id="addModalBody" class="modal-body">
+        <div class="entry">
+          {{#if status}}
+          <h1>{{firstName}} {{lastName}}</h1>
+          {{/if}}
+        </div>
+        <p>
+          <div class="row">
+            <div class="span4">
+              <table>
+                {{{form}}}
+              </table>
+            </div>
+            <div class="span4">
+              {{{form_map}}}
+            </div>
+          </div>
+        </p>
+        <!--        <input type="submit" value="{{button}}" /> -->
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">
+          {{t "add.cancel"}}
+        </button>
+        <button id="mark" type="submit" form="addForm" class="btn btn-primary">
+          {{t "add.submit"}}
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <div>
+    <hr class="featurette-divider">
+    <div class="featurette">
+      <img class="featurette-image pull-right" src="{{baseURL}}/_db/c942093f68371eec17bb0d458e0c6344/attachment">
+      <h2 class="featurette-heading">{{t "add.title"}}<span class="muted">{{t "add.desc"}}</span><a href="#myModal" id="openModal" role="button" class="btn btn-xlarge btn-primary" data-toggle="modal">{{t "add.mark"}}</a></h2>
+      <!-- Button to trigger modal -->
+
+      <p class="lead">
+        {{t "add.desc_sub"}}
+      </p>
+    </div>
+  </div>
+</div>

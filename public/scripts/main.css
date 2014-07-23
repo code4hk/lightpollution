@@ -1,0 +1,19 @@
+@CHARSET "UTF-8";
+#container {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	background-color: #b0e0e6;
+}
+#search-result li:hover {
+	background: black;
+	color: white;
+}
+
+#image-meta{
+		color: white;
+}
+
+.filters{
+		font-size: 18pt;
+}

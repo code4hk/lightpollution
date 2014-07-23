@@ -1,0 +1,66 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+  <!-- build:css({.tmp,app}) styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/main2.css">
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" />
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+  <!-- endbuild -->
+<!--[if IE 7]>
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome-ie7.min.css">
+  <![endif]-->
+  <script type="text/javascript"  src="scripts/modernizr.js"></script>
+  <script type="text/javascript"  src="//maps.googleapis.com/maps/api/js?key=AIzaSyAD0DuFfwB-m7JYCejyWCwkVFrRIvyH3RE&sensor=false&libraries=places&region=HK"></script>
+
+</head>
+<body >
+
+
+    <!--[if lt IE 7]>
+      <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+      <![endif]-->
+
+    <!--[if lt IE 9]>
+      <script src="bower_components/es5-shim/es5-shim.js"></script>
+      <script src="bower_components/json3/lib/json3.min.js"></script>
+      <![endif]-->
+      <!-- build:js(public/scripts) main.js -->
+      <script src="/scripts/requirejsConfig.js"></script>
+      <script data-main="main" src="/scripts/require.min.js"></script>
+      <!-- endbuild -->
+      <div class="include-example" ng-include="'/templates/navigation.html'"></div>
+
+      <div ng-controller="SpotsCtrl">
+        <div class="container" ng-controller="MapCtrl">
+          <leaflet height="600px" center="center" layers="layers" markers="markers" defaults="defaults"></leaflet>
+        </div>
+        <hr>
+        <div ng-view></div>
+        <!-- Manual Injected -->
+        <script src="http://localhost:35730/livereload.js?snipver=1" type="text/javascript"></script>
+      </div>
+
+      <script>
+      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src='//www.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)}(document,'script'));
+      </script>
+
+
+      <!-- </div> -->
+    </div>
+
+  </body>
+  </html>

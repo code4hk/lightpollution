@@ -1,0 +1,83 @@
+<div class="container" ng-controller="NavCtrl">
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner lightmap-navbar">
+			<div class="container">
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
+				<a class="brand" href="#">{{'app.name' | i18next}}</a>
+				<div class="nav-collapse collapse">
+					<ul class="nav">
+						<li class="active">
+							<a href="/">{{'nav.home' | i18next}}</a>
+						</li>
+						<li>
+							<a href="/about">{{'nav.light_pollution' | i18next}}</a>
+						</li>
+						<li>
+							<a href="/spots/add">{{'nav.add' | i18next}}</a>
+						</li>
+						<li>
+							<a href="http://www.facebook.com/lightpollutionmap">Facebook</a>
+						</li>
+						
+						<li>
+							<a href="?setLng=zh-TW" ng-click="changeLng('zh-TW')" >中文</a>
+						</li>
+						<li>
+							<a href="?setLng=en-US" ng-click="changeLng('en-US')">English</a>
+						</li>
+						<li>
+							<!-- <searchAutocomplete selection="name" list="doGetAutocomplete" /> -->
+
+						</li>
+						<li >
+							<div class="navbar navbar-inverse pull-right navbar-search"><form ng-controller="QuerySearchCtrl" id="search-form" method="get" action="">
+								<input id="search-box" type="text" class="search-query" placeholder="{{'nav.search' | i18next}}" ng-model="queryString" typeahead="result.title for result in results |  limitTo:5" >
+								<!-- ng-click="open()" -->
+							</li>
+						</form>
+					</div>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</div>
+</div>
+<div class="container" >
+	<div class="row">
+		<div class="span12">
+
+			<div ng-controller="CarouselDemoCtrl">
+				<carousel interval="myInterval">
+					<slide ng-repeat="slide in slides" active="slide.active">
+						<img class="headerImage" ng-src="{{slide.image}}" style="margin:auto;" alt>
+						<div class="container">
+							<div class="carousel-caption">
+								<h1>{{slide.text | i18next}}</h1>
+								<p></p>
+								<p class="lead">
+									<div ng-show="'{{slide.desc| i18next}}'">{{slide.desc | i18next}}</div>
+								</p><p><a ng-show="'{{slide.actionDesc}}'" class="btn btn-large btn-primary"  href="{{slide.actionHref}}">{{slide.actionDesc | i18next}}</a></p>
+							</div>
+						</div>
+					</slide>
+				</carousel>
+
+			</div>
+
+		</div>
+	</div>
+</div>
+<div class="row"></div>
+<!-- <div class="header">
+<h1>Hong Kong Light Pollution Map</h1>
+<p>
+Here mark the light pollution spot in Hong Kong
+</p>
+
+<p>
+Darkened Hong Kong is more bright
+</p>
+<p>
+Help us by adding your light pollution spots
+</p>
+
+</div> -->

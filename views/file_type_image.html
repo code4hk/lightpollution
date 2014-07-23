@@ -1,0 +1,15 @@
+<div class="span12 image-meta" style="height:64px;">
+	<!-- 64 for image height -->
+<span class="span2">
+<img ng-src="{{getImage(result).url}}">
+</span>
+<ul class="span5">
+<li   ng-show="getImage(result).exif.model"><em>Model:</em>{{getImage(result).exif.model}}</li>
+<li   ng-show="getImage(result).exif.image_height"><em>Image Height:</em>{{getImage(result).exif.image_height}}</li>
+<li  ng-show="getImage(result).exif.image_width"><em>Image Width:</em>{{getImage(result).exif.image_width}}</li>
+<li  ng-show="getImage(result).exif.creation_date"><em>Create Date:</em>{{getImage(result).exif.creation_date}}</li>
+</ul>
+<span  class="span3">FileType:image</span>
+
+
+</div>

@@ -1,0 +1,76 @@
+[{
+
+		"title": "Issue of light",
+		"desc": "Serious light pollution at 3am",
+		"locationArea": "Sheung Wan",
+		"locationDesc": "HK Island",
+		"location": {
+			"lat": 22.287091110351543,
+			"lng": 114.15364623069763
+		},
+		"captureDate": 1381918000000,
+		"uploadDate": 1381908000000,
+		"uploader": "vincent",
+		"type": "lightspot",
+		"newAge": true,
+		"image_url": "20130410_210551_mpbqmh.jpg"
+	}, {
+		"title": "City Chain",
+		"desc": "Serious light pollution at 5am",
+		"locationArea": "Central, Hong Kong",
+		"locationDesc": "香港中環德輔道44-46號日發大廈地下",
+		"location": {
+			"lat": 22.28283221646124,
+			"lng": 114.15834546089172
+		},
+		"captureDate": 1365936000000,
+		"uploadDate": 1381948000000,
+		"uploader": "edward",
+		"type": "lightspot",
+		"image_url": "20130414_233337_jb8lhp.jpg"
+	}, {
+		"title": "Issue of light 2",
+		"desc": "Serious light pollution at 5am",
+		"locationArea": "Kowloon",
+		"locationDesc": "ABC Street",
+		"location": {
+			"lat": 22.27968,
+			"lng": 114.1716
+		},
+		"captureDate": 1365936000000,
+		"uploadDate": 1381948000000,
+		"uploader": "Thomas",
+		"type": "lightspot",
+		"image_url": "20130414_200938_xfgrf9.jpg"
+	}, {
+		"title": "Tsmi Sha Tsui",
+		"desc": "Pollution",
+		"locationArea": "Tsmi Sha Tsui",
+		"locationDesc": "ABC Street",
+		"location": {
+			"lat": 22.30223941076033,
+			"lng": 114.17551159858702
+		},
+		"captureDate": 1365936000000,
+		"uploadDate": 1381948000000,
+		"uploader": "Thomas",
+		"type": "lightspot",
+		"image_url": "20130414_233454_gxq3ao.jpg"
+	}, {
+		"title": "DBS Building",
+		"desc": "大型電視於假日深夜一時人流稀少時仍播放廣告，刺眼及浪費電力",
+		"locationArea": "Hong Kong",
+		"locationDesc": "喜訊大廈香港中環租庇利街1號",
+		"location": {
+			"lat": 22.28283221646124,
+			"lng": 114.15834546089172
+		},
+		"captureDate": 1365936000000,
+		"uploadDate": 1381948000000,
+		"uploader": "Thomas",
+		"type": "lightspot",
+		"image_url": "20130414_233454_gxq3ao.jpg"
+	}
+
+
+]

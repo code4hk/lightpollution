@@ -1,0 +1,107 @@
+<div class="container" ng-controller="SpotsDetailsCtrl">
+<!-- 	<div class="row">
+		<div class="span12">
+			<div id="map_canvas" style="color:black" ></div>
+		</div>
+	</div> -->
+	<div class="row">
+		<!-- 	spot/add	 -->
+		<h2 class="mark-statement">{{'map.found' |i18next}}<a class="btn btn-xlarge btn-primary" href="/spots/add">{{'map.report' |i18next}}</a></h2>
+	</div>
+
+	<!-- <span  ><button  class="badge badge-important btn-large" >By Location</span></span> -->
+
+	<!-- <span  ><button ng-click="sortByTime()" class="badge badge-important btn-large" >By Time</button></span> -->
+
+	<div class="btn-group">
+		<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+			Sort
+			<span class="caret"></span>
+		</a>
+		<ul class="dropdown-menu">
+			<li><a ng-click="showByTime()">By Time</a></li>
+			<!-- dropdown menu links -->
+		</ul>
+	</div>
+
+	<!-- <div>Uploaded By: <input type="text"></div> -->
+
+	<div class="btn-group">
+		<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+			Location
+			<span class="caret"></span>
+		</a>
+		<ul class="dropdown-menu">
+			<li ><a ng-click="showByLocation( 22.28384,114.1583)">Kowloon</a></li>
+			<li ><a ng-click="showByLocation(22.27968,114.1716)">Wanchai</a>22.27968,114.1716</li>
+			<!-- dropdown menu links -->
+		</ul>
+	</div>
+	<div class="row">
+		<h3>List of light pollution spots {{title}}--</h3>
+	</div>
+	<!-- Used fix height, need to sync in css
+	just happended to use nav-->
+	<div class="row spots" ng-repeat="spot in spots">
+
+		<div class="span4 nav spot-image main">
+			<!-- updated to use src instead of data-src at the moment,TODO async load from data-src to src-->
+				<a ng-href="http://res.cloudinary.com/hklightpollution/image/upload/v1381929468/{{spot.image_url}}" class="thumbnail"> <img ng-src="http://res.cloudinary.com/hklightpollution/image/upload/w_450,h_350,c_limit/v1381928922/{{spot.image_url}}" alt="image"></a>
+		</div>
+		<div class="span8 nav main">
+			<div class="row">
+				<div class="span6 spot-details" >
+					<div class="row">
+						<div class="span4">
+							<h4>{{spot.title}}<span class="label label-important">Serious</span>  <span  ng-show="spot.newTag" class="label label-success">New</span> </h4>
+						</div>
+					</div>
+					<!-- possible directive -->
+
+					<div class="row">
+						<div  class="span2" ng-show="spot.locationDesc"><em>{{'add.form.locationDesc' |i18next}}</em></div><div class="span">{{spot.locationDesc}}</div>
+					</div>
+									<div class="row">
+						<div  class="span2" ng-show="spot.locationArea"><em>{{'add.form.locationArea' |i18next}}</em></div><div class="span">{{spot.locationArea}}</div>
+					</div>
+					<div class="row">
+						<div class="span2"  ng-show="spot.description"><em>{{'add.form.description' |i18next}}</em></div><div class="span">{{spot.description}}</div>
+					</div>
+					<div class="row">
+						<div  class="span2"  ng-show="spot.desc"><em>{{'add.form.desc' |i18next}}</em></div><div class="span">{{spot.desc}}</div>
+					</div>
+					<div class="row">
+						<div  class="span2"  ng-show="spot.uploader"><em>{{'add.form.uploader' |i18next}}</em></div><div class="span">{{spot.uploader}}</div>
+					</div>
+					<div class="row">
+						<div  class="span2"  ng-show="spot.captureDate"><em>{{'add.form.captureDate' |i18next}}</em></div><div class="span">{{spot.captureDate| date:'MM/dd/yyyy @ h:mma'}}</div>
+					</div>
+					<div class="row">
+						<div  class="span2"  ng-show="spot.uploadDate"><em>{{'add.form.uploadDate' |i18next}}</em></div><div class="span">{{spot.uploadDate| date:'MM/dd/yyyy @ h:mma'}}</div>
+					</div>
+
+
+					<!-- {{#eachToDisplayProperty this "locationDesc,description,uploader,captureDate,captureTime,uploadDate" }} -->
+					<div class="row">
+						<div class="span2" >
+							<!-- {{t translateKey}} -->
+						</div>
+						<div class="span" >
+							{{value}}
+						</div>
+					</div>
+					<!-- {{/eachToDisplayProperty}} -->
+				</div>
+				<!-- 			potential to show map here as well -->
+				<!-- 			<div class="span3">
+
+			</div> -->
+		</div>
+	</div>
+</div>
+<div >
+</div>
+
+</div>
+
+

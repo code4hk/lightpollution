@@ -1,0 +1,64 @@
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+    <h3 id="myModalLabel"> {{'add.form_modal_title' | i18next}}</h3>
+</div>
+
+<section ng-show="!spotAdded">
+<div class="modal-body">
+    <div class="entry">
+            <!--         {{#if status}}
+                    <h1>{{firstName}} {{lastName}}</h1>
+                    {{/if}} -->
+                </div>
+                <p>
+                    <div class="row">
+                        <div class="span4">
+                            <table>
+                                <!-- {{{form}}} -->
+                                <form novalidate class="simple-form">
+                                    {{ "add.form.title" | i18next}}<input type="text" ng-model="spot.title" placeholder='{{"add.form_default.title" |i18next}}'/><br />
+                                    {{"add.form.locationDesc" | i18next}}<input type="text" ng-model="spot.locationDesc" /><br />
+
+                                    <!-- hidden fields not required -->
+<!-- {{ "add.form.title" | i18next}}<input type="text" ng-model="spot.locationLat" placeholder='{{"add.form_default.title" |i18next}}'/><br />
+
+    {{ "add.form.title" | i18next}}<input type="text" ng-model="spot.locationLng" placeholder='{{"add.form_default.title" |i18next}}'/><br /> -->
+
+    {{"add.form.description" |i18next}}
+    <textarea rows="10" cols="40" ng-model="spot.desc" >
+        {{ "add.form_default.description" |i18next}}
+    </textarea>
+
+    {{"add.form.captureDate" |i18next}}<input type="date" ng-model="spot.captureDate" /><br />
+
+    {{ "add.form.captureTime" |i18next}}<input type="time" ng-model="spot.captureTime" /><br />
+
+
+    {{ "add.form.uploader" |i18next}}<input type="text" ng-model="spot.uploader" /><br />
+
+
+
+</form>
+</table>
+</div>
+<div class="span4">
+    <!-- Another leaflet widget                             -->
+    <!-- '<div>Drag the Marker!</div><div id="map_canvas" class="map_canvas small"></div>' -->
+</div>
+</div>
+</p>
+</div>
+    {{spot}}
+
+
+</section>
+
+<section ng-show="spotAdded">
+    Spot added successfully
+    <!-- show if success -->
+</section>
+<div class="modal-footer">
+
+    <button class="btn btn-primary" ng-click="ok(spot)">OK</button>
+    <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+</div>

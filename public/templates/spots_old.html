@@ -1,0 +1,112 @@
+<div class="container">
+	<div class="row">
+		<div class="span12">
+			<div id="map_canvas" style="color:black" ></div>
+		</div>
+	</div>
+	<div class="row">
+<!-- 	spot/add	 -->
+		<h2 class="mark-statement">Found light pollution? <a class="btn btn-xlarge btn-primary" href="#">Report here ->Comming Soon!</a></h2>
+
+	</div>
+	<div class="row">
+		<h3>List of light pollution spots </h3>
+	</div>
+	{{{include "paging.html"}}}
+		{{#each rows}}
+	{{#with value}}
+	<!-- Used fix height, need to sync in css
+	just happended to use nav-->
+	<div class="row spots">
+		<div class="span4 nav spot-image main">
+			<div ><!-- updated to use src instead of data-src at the moment,TODO async load from data-src to src-->
+				<a href="{{baseURL}}/spots/{{_id}}/image" class="thumbnail"> <img src="{{baseURL}}/spots/{{_id}}/image" alt="image"></a>
+			</div>
+		</div>
+		<div class="span8 nav main">
+			<div class="row">
+				<div class="span6 spot-details">
+					<div class="row">
+						<div class="span4">
+							<h4>{{title}} <span class="label label-important">Serious</span> {{#if newTag}} <span class="label label-success">New</span> {{/if}}</h4>
+						</div>
+					</div>
+					{{#eachToDisplayProperty this "locationDesc,description,uploader,captureDate,captureTime,uploadDate" }}
+					<div class="row">
+						<div class="span2" >
+							{{t translateKey}}
+						</div>
+						<div class="span" >
+							{{value}}
+						</div>
+					</div>
+					{{/eachToDisplayProperty}}
+					
+					
+				</div>
+				<!-- 			potential to show map here as well -->
+				<!-- 			<div class="span3">
+
+				</div> -->
+			</div>
+		</div>
+	</div>
+	{{/with}}
+	{{/each}}
+	<div >
+		{{{include "paging.html"}}}
+	</div>
+
+</div>
+
+<div id="startkey" style="display:none;">
+	{{startkey}}
+</div>
+<div id="next_startkey" style="display:none;">
+	{{next_startkey}}
+</div>
+<!--
+<script src="script/bootstrap.js"></script>
+<script src="script/bootstrap.min.js"></script>
+-->
+
+<script type="text/javascript" charset="utf-8">
+var list2 = ["locationDesc","locationDesc","locationDesc"];
+    //init only after thispage loaded
+    $(document).ready(function() {
+        var gmap = require('lib/gmap');
+        gmap.initialize("map_canvas");
+        gmap.setupHK();
+        
+        gmap.fetchAndMarkAllSpots();
+        //UI control
+        // $('.carousel').carousel()
+
+        //should call after holder.js
+        // var layout = require('lib/layout');
+        // layout.equalHeight();
+
+        $("#craeteSpotButton").click(function() {
+            console.log("create");
+        });
+        //UI control
+
+        function getURLParameter(name) {
+            return decodeURI((RegExp(name + '=' + '(.+?)(&|$)').exec(location.search)||[,null])[1]);
+        }
+
+        var startkey = $("#startkey").text().trim();
+        var next_startkey = $("#next_startkey").text().trim();
+        var prevkey = getURLParameter("prevkey");
+        if(prevkey && prevkey !== 'null') {
+            $("#prev").attr("href", $("#next").attr("href")+"?startkey=" + prevkey);
+            $("#prev").show();
+        }
+        if(next_startkey) {
+            $("#next").attr("href", $("#next").attr("href")+"?startkey=" + next_startkey + "&prevkey=" + startkey);
+            $("#next").show();
+        }
+        // /spots/:slug/image
+
+    })
+</script>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>HK Light Pollution Map| {{title}}</title>
+  <link href="{{baseURL}}/static/style/css/bootstrap.css" rel="stylesheet">
+  <link href="{{baseURL}}/static/style/css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="{{baseURL}}/static/style/css/map.css" rel="stylesheet">
+  
+  <link href="{{baseURL}}/static/style/css/jquery.ui.timepicker.css" rel="stylesheet">
+  
+  <link href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" rel="stylesheet">
+
+  <script type="text/javascript"	src="//maps.googleapis.com/maps/api/js?key=AIzaSyAD0DuFfwB-m7JYCejyWCwkVFrRIvyH3RE&sensor=false&libraries=places&region=HK"></script>
+  <!-- 		need explicit loading 1.4.2 for duality.js 1.9.2 not supproted?-->
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="//raw.github.com/imsky/holder/master/holder.js"></script>
+  <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.rc.2/handlebars.min.js"></script>
+  <!-- 		<script src="https://raw.github.com/twitter/bootstrap/master/js/bootstrap-carousel.js"></script> -->
+  <script type="text/javascript" src="{{baseURL}}/modules.js"></script>
+  <script type="text/javascript" src="{{baseURL}}/duality.js"></script>
+  
+  <script type="text/javascript" src="{{baseURL}}/static/script/jquery.ui.timepicker.js"></script>
+
+  <script type="text/javascript" src="{{baseURL}}/static/script/jquery.geocomplete.js"></script>
+  <!-- 		https://raw.github.com/ubilabs/geocomplete/master/jquery.geocomplete.js -->
+
+  <!-- 		<script type="text/javascript" src="	//raw.github.com/fnando/i18n-js/master/vendor/assets/javascripts/i18n.js"></script> -->
+  <!-- 		<script type="text/javascript" src="//jamuhl.github.com/i18next/public/download/versions/i18next-1.6.0.min.js"></script> -->
+
+  <!-- google analytics-->
+  <script>
+  (function(i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] ||
+    function() {
+        (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+ga('create', 'UA-39862281-1', 'cloudant.com');
+ga('send', 'pageview');
+</script>
+<script type="text/javascript">
+            //can we log baseUrl?
+            var users = require('users');
+            var db = require('db').current();
+            var $ = require('jquery');
+            // var handlebars = require('handlebars');
+            // handlebars.registerHelper('I18n', function(str) {
+            // return (I18n != undefined ? I18n.t(str) : str);
+            // });
+
+            // handlebars.registerHelper('i18n', function(str) {
+            // // console.log(str);
+            //
+            // return (i18n != undefined ? i18n.t(str) : str);
+            // });
+
+            //Localization
+            // I18n.defaultLocale = "en-US";
+            // I18n.locale = "en-US";
+            // console.log(I18n.currentLocale());
+            //
+            // I18n.translations = {};
+            // I18n.translations["en-US"] = {
+            // message : "Some special message for you"
+            // }
+
+            // with options
+
+            // var option = {
+            // lng : "en-US",
+            // resGetPath : '{{baseURL}}/static/locales/__lng__/__ns__.json'
+            // };
+            //
+            // // zh_TW
+            //
+            // $.i18n.init(option);
+            // //Need to make sure it is finish before use it
+
+            $().ready(function() {
+
+                var search = require("lib/search");
+                search.search_init();
+                // // "later"
+                // var x = $.t("app.name");
+                // //TODO write an unit test to check the translation ability
+                // console.log(x)
+                // // console.log("translated");
+                // // console.log(I18n.t("message"));
+                //
+
+            });
+
+            </script>
+        </head>
+        <body>
+          <div class="container">
+             <div id="search-result"></div>
+             {{{include "navigation.html"}}}
+			<!-- 			Base{{baseURL}}
+			def{{a}}
+			{{doc._id}} -->
+			<div id="content">
+				{{{content}}}
+			</div>
+			{{{include "footer.html"}}}
+		</div>
+	</body>
+
+    </html>
+

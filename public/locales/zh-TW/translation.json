@@ -1,0 +1,67 @@
+{
+    "app": {
+        "name": "香港光害地圖"
+    },
+    "header1": {
+        "title": "香港光害地圖",
+        "desc": "舉報香港光害黑點",
+        "actionDesc": "了解光污染"
+    },
+    "header2": {
+        "title": "熄燈，香港其實更光亮"
+    },
+    "nav": {
+        "home": "目錄",
+        "light_pollution": "關於光污染",
+        "add": "舉報黑點",
+        "search": "搜尋"
+    },
+    "about": {
+        "heading1": "Light pollution",
+        "desc1": "is any adverse effect of artificial light, including sky glow, glare, light trespass, light clutter, decreased visibility at night and energy waste.",
+        "desc_sub1": "Give us the details about the light pollution spot. Let the media follow up.",
+        "desc_link1": "Definition by International Dark SKy Association",
+        "heading2": "Energy Waste",
+        "desc2": "Light Pollution",
+        "desc_sub2": "Light Pollution",
+        "heading3": "Impact on Astronomy",
+        "desc3": "People don't believe they can see the Milky way in Hong Kong. It is possible but not any more if light pollution is getting worse.",
+        "desc_sub3": "Light Pollution",
+        "heading4": "To Know more",
+        "desc4": "Visit these websites",
+        "desc_link4": "Earth hour"
+    },
+    "map": {
+        "found": "發現光害？",
+        "report": "舉報黑點"
+    },
+    "add": {
+        "form": {
+            "title": "標題",
+            "desc": "光害情況",
+            "locationDesc": "地點",
+            "locationArea": "地區",
+            "description": "情況",
+            "captureDate": "拍攝日期",
+            "captureTime": "拍攝時間",
+            "formatted_address": "圖標地址",
+            "uploader": "上傳者",
+            "uploadDate": "上傳日期"
+
+        },
+        "form_default": {
+            "title": "光害問題",
+            "locationDesc": "尖沙咀星光大道"
+        },
+        "form_errors": {
+            "required": "必填",
+            "invalid": "輸入無效"
+        },
+        "title": "在地圖舉報光害黑點",
+        "desc": "令香港成為一個更少污染的城市",
+        "desc_sub": "舉報光害黑點，讓傳媒及市民監察",
+        "mark": "舉報光害黑點",
+        "mark_now": "舉報",
+        "submit": "舉報"
+    }
+}

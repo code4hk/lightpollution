@@ -1,0 +1,18 @@
+<div>
+   <div class="modal-header">
+    <h3>Search</h3>
+    <input id="search-box" type="text" class="search-query" placeholder="{{'nav.search' | i18next}}" ng-model="queryString" typeahead="result.title for result in results |  limitTo:5" autofocus  />
+</div>
+<div class="modal-body">
+    <ul>
+        <li ng-repeat="spot in spots">
+            <a ng-click="selected.item = item">{{ item }}</a>
+        </li>
+    </ul>
+    Selected: <b>{{ selected.item }}</b>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()">OK</button>
+    <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+</div>
+</div>

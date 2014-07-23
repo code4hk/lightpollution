@@ -1,0 +1,81 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+  <!-- build:css({.tmp,app}) styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/main2.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+  <!-- endbuild -->
+<!--[if IE 7]>
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome-ie7.min.css">
+  <![endif]-->
+
+    <script type="text/javascript"  src="//maps.googleapis.com/maps/api/js?key=AIzaSyAD0DuFfwB-m7JYCejyWCwkVFrRIvyH3RE&sensor=false&libraries=places&region=HK"></script>
+  <!--    need explicit loading 1.4.2 for duality.js 1.9.2 not supproted?-->
+
+  <script type="text/javascript" charset="utf-8">
+var list2 = ["locationDesc","locationDesc","locationDesc"];
+    //init only after thispage loaded
+ 
+</script>
+
+
+</head>
+<body >
+
+
+    <!--[if lt IE 7]>
+      <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+      <![endif]-->
+
+    <!--[if lt IE 9]>
+      <script src="bower_components/es5-shim/es5-shim.js"></script>
+      <script src="bower_components/json3/lib/json3.min.js"></script>
+      <![endif]-->
+
+      <!-- build:js(public) main.js -->
+      <script data-main="scripts/main" src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.6/require.min.js"></script>
+      <!-- endbuild -->
+      <div class="include-example" ng-include="'templates/navigation.html'"></div>
+
+      <p>APPNAME:{{'app.name' |i18next}}</p>
+      <!-- once controller can load var then fine -->
+      <div ng-controller="MainCtrl">
+        <!-- <p>{{'hello2' | i18next}}</p> -->
+
+        <!-- Add your site or application content here -->
+        <!-- <div class="container" ng-view=""> </div> -->
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        SPOTS
+      <div  ng-include="'templates/spots.html'"></div>
+
+
+      <div  ng-include="'uploadImage.html'"></div>
+
+
+        <!-- Manual Injected -->
+        <script src="http://localhost:35730/livereload.js?snipver=1" type="text/javascript"></script>
+
+        <script>
+        var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+          g.src='//www.google-analytics.com/ga.js';
+          s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+
+
+      </div>
+    </div>
+
+  </body>
+  </html>

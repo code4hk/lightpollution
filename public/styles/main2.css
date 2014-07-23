@@ -1,0 +1,364 @@
+.cloudService{
+  font-size: 30px;
+}
+
+body {
+  background: #fafafa;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+}
+
+.hero-unit {
+  margin: 50px auto 0 auto;
+  width: 600px;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 30px;
+  background-color: #eee;
+  border-radius: 6px;
+  padding: 60px;
+}
+
+.hero-unit h1 {
+  font-size: 60px;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.image-meta li{
+  font-size: 0.7em;
+  line-height: 1.4em;
+}
+
+
+.animate-enter, 
+.animate-leave
+{ 
+  -webkit-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+  -moz-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+  -ms-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+  -o-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+  transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+  position: relative;
+  display: block;
+} 
+
+.animate-enter.animate-enter-active, 
+.animate-leave {
+  opacity: 1;
+  left: 0;
+  height: 30px;
+}
+
+.animate-leave.animate-leave-active,
+.animate-enter {
+  opacity: 0;
+  left: -50px;
+  height: 0px;
+}
+@CHARSET "UTF-8";
+#container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  background-color: #b0e0e6;
+}
+#search-result li:hover {
+  background: black;
+  color: white;
+}
+
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+a {
+  color: #00B7FF;
+}
+
+
+#editor-wrapper {
+  display: table;
+  table-layout: fixed;
+  
+  width:100%;
+  height:100px;
+  background-color:Gray;
+}
+#editor-wrapper div {
+  display: table-cell;
+  height:100px;
+}
+
+textarea {
+ -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+ -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+ box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+/* add styles here */
+
+body {
+  font:1em Helvetica, sans-serif;
+  padding:4px;
+}
+
+h1 {
+  margin-top:0;
+}
+
+#account {
+  float:right;
+}
+
+#profile {
+  border:4px solid #edd;
+  background:#fee;
+  padding:8px;
+  margin-bottom:8px;
+}
+
+#items {
+  border:4px solid #dde;
+  background:#eef;
+  padding:8px;
+  width:60%;
+  float:left;
+}
+
+#sidebar {
+  border:4px solid #dfd;
+  padding:8px;
+  float:right;
+  width:30%;
+}
+
+#items li {
+  border:4px solid #f5f5ff;
+  background:#fff;
+  padding:8px;
+  margin:4px 0;
+}
+
+form {
+  padding:4px;
+  margin:6px;
+  background-color:#ddd;  
+}
+
+div.avatar {
+  padding:2px;
+  padding-bottom:0;
+  margin-right:4px;
+  float:left;
+  font-size:0.78em;
+  width : 60px;
+  height : 60px;
+  text-align: center;
+}
+
+div.avatar .name {
+  padding-top:2px;
+}
+
+div.avatar img {
+  margin:0 auto;
+  padding:0;
+  width : 40px;
+  height : 40px;
+}
+
+#items ul {
+  list-style: none;
+}
+
+@CHARSET "UTF-8";
+
+body {
+  /*  color: white;*/
+  color: white;
+  background-color: black;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  /*              background-image: url('https://lh3.googleusercontent.com/-7nFfLhXEhks/TxhNA5efGWI/AAAAAAAAAJ4/r8vUcKyifx8/s770/IMG_7174.jpg');*/
+  /*  background-image: url('../img/bg.jpg'); */
+  background-size: 75% 100%;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+.lightmap-navbar {
+  color: white;
+  font-size: 20px;
+}
+
+.modal {
+  z-index: 2000;
+  color: black;
+  width: 800px;
+}
+.modal-body {
+  max-height: 800px;
+}
+
+.modal-backdrop {
+  z-index: 1030;
+  }​
+
+  .pac-container {
+    background-color: #FFF;
+    z-index: 2000;
+    position: fixed;
+    display: inline-block;
+    float: left;
+  }
+
+  .ui-autocomplete {
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: default;
+  }
+  .btn-xlarge {
+    padding: 10px 16px;
+    font-size: 36px;
+    line-height: normal;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
+  .mark-statement {
+    float: right;
+  }
+  .headerImage {
+    margin: 2px;
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    /*  float: left;*/
+    text-align: center;
+  }
+/*div.grid {
+ color:black;
+ background-color: white;
+ margin-top:10px;
+ margin-bottom:20px;
+ }*/
+
+ .item {
+  height: 370px;
+}
+
+.form-content input, textarea {
+  width: 100%;
+}
+div.spots .main {
+  /*  height: 290px;*/
+  background-color: white;
+  color: black;
+  /*  text-align: center;*/
+
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  min-height: 140px;
+  line-height: 30px;
+
+  min-height:350px;
+
+}
+.spot-image {
+  min-height: 350px;
+  position:relative;
+  overflow: hidden;
+  margin-right: 5px;
+
+  /*  supposed to be same as right box*/
+}
+
+.spot-image a{
+  text-align: center;
+  position: absolute;
+  width:95%;
+
+
+}
+.spot-image img{
+    position: absolute;
+          top:0;
+  bottom:0;
+  margin:auto;
+
+}
+.spot-details {
+  /*  float:left ;*/
+  padding: 10px;
+  text-align: left;
+}
+
+#container {
+}
+
+.featurette {
+  padding-top: 120px; /* Vertically center images part 1: add padding above and below text. */
+  overflow: hidden; /* Vertically center images part 2: clear their floats. */
+}
+.featurette-image {
+  margin-top: -120px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
+  height: 300px;
+  width: 300px;
+}
+
+/* Give some space on the sides of the floated elements so text doesn't run right into it. */
+.featurette-image.pull-left {
+  margin-right: 40px;
+}
+.featurette-image.pull-right {
+  margin-left: 40px;
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-size: 50px;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+/*html {
+ height: 100%
+ }
+ body {
+ height: 100%;
+ width: 100%;
+ margin: 0;
+ padding: 0
+ }*/
+ #map_canvas {
+  margin-left: auto;
+  margin-right: auto;
+  height: 600px;
+  width: 100%;
+    /*              need to set as percentage...of what? by defauly just maximize itself
+    */
+    /*               TODO study how css fit parent*/
+
+  }
+
+  #map_canvas.small {
+    height: 300px;
+  }
+
+  .paging {
+    font-size: 25px;
+    font-weight: 300;
+  }
+/*
+ * Suggestions
+ */
+ div.pac-container {
+  color: black;
+}
+
+
+

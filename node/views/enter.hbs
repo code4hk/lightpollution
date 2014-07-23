@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<LINK href="styles/main.css" rel="stylesheet" type="text/css">
+		<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+		<style>
+
+		.connect-evernote {
+			background-color:#69b249;
+			background-image: -webkit-linear-gradient(top, rgb(102, 185, 65) 0%, rgb(61, 139, 39) 100%);
+		}
+		.connect-evernote:hover {
+			background-color:rgb(61, 139, 39);
+
+		}
+		.connect-github {
+			background-color:black;
+			background-image: -webkit-linear-gradient(top, gray 0%, black 100%);
+
+		}
+		.connect-github:hover {
+			background-color:black;
+
+		}
+
+	.connect-gdrive {
+		background-image: -webkit-linear-gradient(top,#dd4b39, #c53727);
+
+		}
+	.connect-gdrive:hover {
+			background-color:#c53727;
+
+		}
+		/*#d14836*/
+
+		</style>
+	</head>
+	<body>
+		<!-- change wording to Login when login. Again, handlebars?-->
+		<div class="container">
+			<h1>Login</h1>
+			<hr />
+			<div><a href="/oauth/dropbox" class="btn btn-primary connect-dropbox"><img src="/images/glyphicons_381_dropbox.png" />Connect With Dropbox</a></div>
+			<p></p>
+
+			<div><a href="/oauth/evernote"  button class="btn btn-primary connect-evernote">Connect With Evernote</a></div>
+			<p></p>
+			<div><a href="/oauth/github" class="btn btn-primary connect-github">Connect With Github</a></div>
+						<p></p>
+			<div><a href="/oauth/gdrive" class="btn btn-primary connect-gdrive">Connect With Google Drive</a></div>
+			<div>{{output}}</div>
+			<div>Error:{{error}}</div>
+			<div id="container">
+				Login:
+				<p></p>
+				<form action="login" method="POST">
+					<label>User ID</label>
+					<input name="username" id="username" >
+					<input name="password" id="password" >
+					<input type="submit"></input>
+
+				</form>
+			</div>
+
+
+		</div>
+	</body>
+	</html>
