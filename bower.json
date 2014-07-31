@@ -16,11 +16,14 @@
     "angular": "*",
     "angular-route": "*",
     "elastic.js": "*",
+    "elasticsearch":"*",
     "leaflet": "*",
     "angular-leaflet": "0.6.2",
+    "i18next":"*",
     "ng-i18next": "0.2.8",
     "jqueryui": "*",
-    "leaflet.markerclusterer": "*"
+    "leaflet.markerclusterer": "*",
+    "blueimp-canvas-to-blob":"*"
   },
   "devDependencies": {
     "angular-mocks": "~1.0.7",

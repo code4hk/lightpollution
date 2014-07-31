@@ -21,7 +21,8 @@
     "gulp-livereload": "*",
     "gulp-concat": "*",
     "tiny-lr": "~0.0.5",
-    "gulp-bower": "0.0.2"
+    "gulp-bower": "0.0.2",
+    "request": "*"
   },
   "engines": {
     "node": ">=0.8.0"

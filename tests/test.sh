@@ -1,7 +1,9 @@
+curl -XDELETE http://localhost:9200/lightpollution/
+curl -XPUT  http://localhost:9200/lightpollution/
 curl -XPUT  http://localhost:9200/lightpollution/spot/_mapping -d '
 { 	"spot": {
 			"_source": {
-				"enabled": false
+				"enabled": true
 				},
 				"properties": {
 					"id": {
@@ -24,3 +26,5 @@ curl -XPUT  http://localhost:9200/lightpollution/spot/_mapping -d '
 
 }';
 
+
+node uploadTestSpots.js

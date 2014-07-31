@@ -64,7 +64,7 @@ define(
 				console.log('modal closed');
 			};
 			var dismissCb = function() {
-				$location.path('/spots');
+				$location.path('spots22');
 			};
 			$scope.cancel = function() {
 				console.log('modal dismissed');

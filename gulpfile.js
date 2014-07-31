@@ -23,11 +23,11 @@ gulp.task('default', ['bower', 'listen'], function() {
         .pipe(watch())
         .pipe(livereload(server));
     
-    gulp.src(publicFolder+'styles/*.scss')
-         .pipe(watch())
-         .pipe(sass())
-         .pipe(gulp.dest(publicFolder + 'styles/'))
-         .pipe(livereload(server));
+    // gulp.src(publicFolder+'styles/*.scss')
+    //      .pipe(watch())
+    //      .pipe(sass())
+    //      .pipe(gulp.dest(publicFolder + 'styles/'))
+    //      .pipe(livereload(server));
 });
 
 gulp.task('listen', function(next) {

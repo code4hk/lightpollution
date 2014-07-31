@@ -14,6 +14,7 @@ define(
 	// "Directives/directives",
 	// "Filters/filters",
 
+// $locationProvider.html5Mode(true).hashPrefix('!');
 	// Services, Directives, Filters
 
 	function BaseManager(angular, controllers, services, routes, blueimp_file_upload, _ejs, esAngularClient, angluar_route, _i18) {
@@ -51,9 +52,11 @@ define(
 
 			// services["spotService"]
 			.config(['$provide', function($provide) {
+
 				console.log('spotService');
 				$provide.factory('spotService', ['$http','$q', services.spotService]);
 			}])
+			
 				.config(routes)
 
 			// 	.config(
